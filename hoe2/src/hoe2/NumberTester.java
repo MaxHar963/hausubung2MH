@@ -54,7 +54,7 @@ public class NumberTester {
 
    
 
-    public List readFile() {
+    public List<String> readFile() {
         List<String> list = new ArrayList<>();
 
         try {
@@ -79,7 +79,7 @@ public class NumberTester {
 
         List<String> strList = new ArrayList<>();
 
-        for (int i = 1; i < Integer.parseInt(list1.get(0)); i++) {
+        for (int i = 1; i <= Integer.parseInt(list1.get(0)); i++) {
 
             String x = list1.get(i);
             String[] arr = x.split(" ");
