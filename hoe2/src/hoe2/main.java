@@ -23,10 +23,11 @@ public class main {
         NumberTester n1 = new NumberTester("file");
 
         boolean istrue = true;
-
+        boolean istrue1 = true;
+        
         Scanner in = new Scanner(System.in);
 
-        while (istrue = true) {
+        while (istrue) {
 
             System.out.println("NumberTester ...  1");
             System.out.println("AbstractCalulator ...  2");
@@ -118,15 +119,51 @@ public class main {
                     
                     },
                     (a, b) -> {
+                        
+                        
                     
                     return new Number(a.getA()/b.getA(),0);
                     
                     
                     });
                     
+                    AbstractCalculator complexCalculator = new ComplexCalculator(
+                    (a, b) -> {
+                    
+                    return new Number(a.getA()+b.getB(),b.getA()+b.getB());
+                    
+                    },
+                    (a, b) -> {
+                    
+                    
+                    return new Number(a.getA()+-b.getB(),b.getA()-b.getB());
+                    
+                    
+                    },
+                    (a, b) -> {
+                        
+                        
+                    
+                    return new Number(a.getA()*b.getA()+a.getB()*b.getB(),0);
+                    
+                    },
+                    (a, b) -> {
+                        
+                        
+                    
+                    return new Number(a.getA()/b.getA(),0);
+                    
+                    
+                    });
                     
                      
+                    while(istrue1)
+                    {
                     
+                        
+                        
+                    
+                    }
                     
                     
                     
@@ -135,6 +172,7 @@ public class main {
                     
                     break;
                 case 3:
+                    System.exit(0);
                     break;
 
             }
