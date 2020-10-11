@@ -28,9 +28,9 @@ public class main {
 
         while (istrue = true) {
 
-            System.out.println("Bsp NumberTester ... 1");
-            System.out.println("Bsp AbstractCalulator ... 2");
-            System.out.println("Exit  ... 3");
+            System.out.println("NumberTester ...  1");
+            System.out.println("AbstractCalulator ...  2");
+            System.out.println("Exit ...  3");
 
             int eingabe = Integer.parseInt(in.nextLine());
 
@@ -66,6 +66,49 @@ public class main {
                     break;
 
                 case 2:
+                    
+                    AbstractCalculator relationalCalculator = new RationalCalculator(
+                    (a, b) -> {
+                    
+                    double gemNenner = a.getB() * b.getB();
+                    
+                    double x = gemNenner/a.getB()*a.getA();
+                    double y = gemNenner/b.getB()*b.getA();
+                    return new Number(x+y,gemNenner);
+                    
+                    },
+                    (a, b) -> {
+                    
+                    double gemNenner = a.getB() * b.getB();
+                    
+                    double x = gemNenner/a.getB()*a.getA();
+                    double y = gemNenner/b.getB()*b.getA();
+                    return new Number(x-y,gemNenner);
+                    
+                    
+                    },
+                    (a, b) -> {
+                    
+                    return new Number(a.getA()*b.getA(),b.getB()*a.getB());
+                    
+                    },
+                    (a, b) -> {
+                    
+                    return new Number(a.getA()/b.getA(),b.getB()/a.getB());
+                    
+                    
+                    });
+                    
+                    
+                    
+                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     break;
                 case 3:
                     break;
