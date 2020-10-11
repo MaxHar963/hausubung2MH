@@ -142,7 +142,7 @@ public class main {
                     break;
 
                 case 2:
-
+                        istrue1 = true;
                     while (istrue1) {
 
                         System.out.println("Choose calculator: ");
@@ -163,30 +163,31 @@ public class main {
 
                                     ma.printChOP();
                                     int eingabe2 = Integer.parseInt(in.nextLine());
-                                    MyNumber erg;
+                                    MyNumber erg = new MyNumber(0, 0);
                                     switch (eingabe2) {
 
                                         case 1:
                                             istrue3 = false;
-                                            erg = relationalCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
+                                            erg = relationalCalculator.add.calc(new MyNumber(inputList.get(0), inputList.get(1)), new MyNumber(inputList.get(2), inputList.get(3)));
                                             break;
                                         case 2:
                                             istrue3 = false;
-                                            erg = relationalCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
+                                            erg = relationalCalculator.add.calc(new MyNumber(inputList.get(0), inputList.get(1)), new MyNumber(inputList.get(2), inputList.get(3)));
                                             break;
                                         case 3:
                                             istrue3 = false;
-                                            erg = relationalCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
+                                            erg = relationalCalculator.add.calc(new MyNumber(inputList.get(0), inputList.get(1)), new MyNumber(inputList.get(2), inputList.get(3)));
                                             break;
                                         case 4:
                                             istrue3 = false;
-                                            erg = relationalCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
+                                            erg = relationalCalculator.add.calc(new MyNumber(inputList.get(0), inputList.get(1)), new MyNumber(inputList.get(2), inputList.get(3)));
                                             break;
                                         case 5:
                                             //case : Zahlen neu eingeben     
                                             break;
 
                                     }
+                                    ma.outputNumbers(erg);
                                 }
 
                                 break;
@@ -196,30 +197,31 @@ public class main {
 
                                     ma.printChOP();
                                     int eingabe2 = Integer.parseInt(in.nextLine());
-                                    MyNumber erg;
+                                    MyNumber erg = new MyNumber(0, 0);
                                     switch (eingabe2) {
 
                                         case 1:
                                             istrue3 = false;
-                                            erg = vectorCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
+                                            erg = vectorCalculator.add.calc(new MyNumber(inputList.get(0), inputList.get(1)), new MyNumber(inputList.get(2), inputList.get(3)));
                                             break;
                                         case 2:
                                             istrue3 = false;
-                                            erg = vectorCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
+                                            erg = vectorCalculator.add.calc(new MyNumber(inputList.get(0), inputList.get(1)), new MyNumber(inputList.get(2), inputList.get(3)));
                                             break;
                                         case 3:
                                             istrue3 = false;
-                                            erg = vectorCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
+                                            erg = vectorCalculator.add.calc(new MyNumber(inputList.get(0), inputList.get(1)), new MyNumber(inputList.get(2), inputList.get(3)));
                                             break;
                                         case 4:
                                             istrue3 = false;
-                                            erg = vectorCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
+                                            erg = vectorCalculator.add.calc(new MyNumber(inputList.get(0), inputList.get(1)), new MyNumber(inputList.get(2), inputList.get(3)));
                                             break;
                                         case 5:
                                             //case : Zahlen neu eingeben
                                             break;
 
                                     }
+                                    ma.outputNumbers(erg);
                                 }
 
                                 break;
@@ -229,64 +231,35 @@ public class main {
 
                                     ma.printChOP();
                                     int eingabe2 = Integer.parseInt(in.nextLine());
-                                    MyNumber erg;
+                                    MyNumber erg = new MyNumber(0, 0);
                                     switch (eingabe2) {
 
                                         case 1:
                                             istrue3 = false;
-                                            erg = complexCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
+                                            erg = complexCalculator.add.calc(new MyNumber(inputList.get(0), inputList.get(1)), new MyNumber(inputList.get(2), inputList.get(3)));
                                             break;
                                         case 2:
                                             istrue3 = false;
-                                              erg = complexCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
+                                            erg = complexCalculator.add.calc(new MyNumber(inputList.get(0), inputList.get(1)), new MyNumber(inputList.get(2), inputList.get(3)));
                                             break;
                                         case 3:
                                             istrue3 = false;
-                                            erg = complexCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
+                                            erg = complexCalculator.add.calc(new MyNumber(inputList.get(0), inputList.get(1)), new MyNumber(inputList.get(2), inputList.get(3)));
                                             break;
                                         case 4:
                                             istrue3 = false;
-                                            erg = complexCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
+                                            erg = complexCalculator.add.calc(new MyNumber(inputList.get(0), inputList.get(1)), new MyNumber(inputList.get(2), inputList.get(3)));
                                             break;
                                         case 5:
                                             //case : Zahlen neu eingeben
                                             break;
 
                                     }
+                                    ma.outputNumbers(erg);
                                 }
                                 break;
                             case 4:
-                                while (istrue3) {
-                                    inputList = (ArrayList<Integer>) ma.inputNumbers();
-
-                                    ma.printChOP();
-                                    int eingabe2 = Integer.parseInt(in.nextLine());
-                                    MyNumber erg;
-                                    switch (eingabe2) {
-
-                                        case 1:
-                                            istrue3 = false;
-                                            erg = relationalCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
-                                            break;
-                                        case 2:
-                                            istrue3 = false;
-                                            erg = relationalCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
-                                            break;
-                                        case 3:
-                                            istrue3 = false;
-                                            erg = relationalCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
-                                            break;
-                                        case 4:
-                                            istrue3 = false;
-                                            erg = relationalCalculator.add.calc(new MyNumber(inputList.get(1), inputList.get(2)), new MyNumber(inputList.get(3), inputList.get(4)));
-                                            break;
-                                        case 5:
-                                            //case : Zahlen neu eingeben
-
-                                            break;
-
-                                    }
-                                }
+                                istrue1 = false;
                                 break;
 
                         }
@@ -341,7 +314,7 @@ public class main {
 
         System.out.println("Solution: ");
         System.out.println("a = " + n.getA());
-        System.out.println("a = " + n.getB());
+        System.out.println("b = " + n.getB() + "\n");
 
     }
 
