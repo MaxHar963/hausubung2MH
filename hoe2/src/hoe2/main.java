@@ -15,8 +15,8 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        HalloJavamitForEach h = new HalloJavamitForEach();
-        
+        //HalloJavamitForEach h = new HalloJavamitForEach();
+        NumberTester n = new NumberTester("file");
     }
     
 }
