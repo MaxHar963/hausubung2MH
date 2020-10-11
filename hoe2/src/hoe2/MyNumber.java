@@ -9,11 +9,11 @@ package hoe2;
  *
  * @author angeh
  */
-public class Number {
+public class MyNumber {
     private double a;
     private double b;
 
-    public Number(double a, double b) {
+    public MyNumber(double a, double b) {
         this.a = a;
         this.b = b;
     }

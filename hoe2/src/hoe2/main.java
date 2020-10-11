@@ -77,7 +77,7 @@ public class main {
 
                                 double x = gemNenner / a.getB() * a.getA();
                                 double y = gemNenner / b.getB() * b.getA();
-                                return new Number(x + y, gemNenner);
+                                return new MyNumber(x + y, gemNenner);
 
                             },
                             (a, b) -> {
@@ -86,61 +86,61 @@ public class main {
 
                                 double x = gemNenner / a.getB() * a.getA();
                                 double y = gemNenner / b.getB() * b.getA();
-                                return new Number(x - y, gemNenner);
+                                return new MyNumber(x - y, gemNenner);
 
                             },
                             (a, b) -> {
 
-                                return new Number(a.getA() * b.getA(), b.getB() * a.getB());
+                                return new MyNumber(a.getA() * b.getA(), b.getB() * a.getB());
 
                             },
                             (a, b) -> {
 
-                                return new Number(a.getA() / b.getA(), b.getB() / a.getB());
+                                return new MyNumber(a.getA() / b.getA(), b.getB() / a.getB());
 
                             });
 
                     AbstractCalculator vectorCalculator = new VectorCalculator(
                             (a, b) -> {
 
-                                return new Number(a.getA() + b.getB(), b.getA() + b.getB());
+                                return new MyNumber(a.getA() + b.getB(), b.getA() + b.getB());
 
                             },
                             (a, b) -> {
 
-                                return new Number(a.getA() + -b.getB(), b.getA() - b.getB());
+                                return new MyNumber(a.getA() + -b.getB(), b.getA() - b.getB());
 
                             },
                             (a, b) -> {
 
-                                return new Number(a.getA() * b.getA() + a.getB() * b.getB(), 0);
+                                return new MyNumber(a.getA() * b.getA() + a.getB() * b.getB(), 0);
 
                             },
                             (a, b) -> {
 
-                                return new Number(a.getA() / b.getA(), 0);
+                                return new MyNumber(a.getA() / b.getA(), 0);
 
                             });
 
                     AbstractCalculator complexCalculator = new ComplexCalculator(
                             (a, b) -> {
 
-                                return new Number(a.getA() + b.getB(), b.getA() + b.getB());
+                                return new MyNumber(a.getA() + b.getB(), b.getA() + b.getB());
 
                             },
                             (a, b) -> {
 
-                                return new Number(a.getA() + -b.getB(), b.getA() - b.getB());
+                                return new MyNumber(a.getA() + -b.getB(), b.getA() - b.getB());
 
                             },
                             (a, b) -> {
 
-                                return new Number(a.getA() * b.getA() + a.getB() * b.getB(), 0);
+                                return new MyNumber(a.getA() * b.getA() + a.getB() * b.getB(), 0);
 
                             },
                             (a, b) -> {
 
-                                return new Number(a.getA() / b.getA(), 0);
+                                return new MyNumber(a.getA() / b.getA(), 0);
 
                             });
 
@@ -161,33 +161,116 @@ public class main {
 
                                 while (istrue3) {
                                     inputList = (ArrayList<Integer>) ma.inputNumbers();
-                                }
 
-                                ma.printChOP();
-                                int eingabe2 = Integer.parseInt(in.nextLine());
-                                switch (eingabe2) {
+                                    ma.printChOP();
+                                    int eingabe2 = Integer.parseInt(in.nextLine());
+                                    switch (eingabe2) {
 
-                                    case 1:
-                                        
-                                        break;
-                                    case 2:
-                                        break;
-                                    case 3:
-                                        break;
-                                    case 4:
-                                        break;
-                                    case 5:
-                                        break;
+                                        case 1:
+                                            istrue3 = false;
+                                            relationalCalculator.add.calc(x, y);
+                                            break;
+                                        case 2:
+                                            istrue3 = true;
+                                            break;
+                                        case 3:
+                                            istrue3 = true;
+                                            break;
+                                        case 4:
+                                            istrue3 = true;
+                                            break;
+                                        case 5:
 
+                                            break;
+
+                                    }
                                 }
 
                                 break;
                             case 2:
+                                while (istrue3) {
+                                    inputList = (ArrayList<Integer>) ma.inputNumbers();
+
+                                    ma.printChOP();
+                                    int eingabe2 = Integer.parseInt(in.nextLine());
+                                    switch (eingabe2) {
+
+                                        case 1:
+                                            istrue3 = false;
+                                        
+                                            break;
+                                        case 2:
+                                            istrue3 = true;
+                                            break;
+                                        case 3:
+                                            istrue3 = true;
+                                            break;
+                                        case 4:
+                                            istrue3 = true;
+                                            break;
+                                        case 5:
+
+                                            break;
+
+                                    }
+                                }
 
                                 break;
                             case 3:
+                                while (istrue3) {
+                                    inputList = (ArrayList<Integer>) ma.inputNumbers();
+
+                                    ma.printChOP();
+                                    int eingabe2 = Integer.parseInt(in.nextLine());
+                                    switch (eingabe2) {
+
+                                        case 1:
+                                            istrue3 = false;
+                                        
+                                            break;
+                                        case 2:
+                                            istrue3 = true;
+                                            break;
+                                        case 3:
+                                            istrue3 = true;
+                                            break;
+                                        case 4:
+                                            istrue3 = true;
+                                            break;
+                                        case 5:
+
+                                            break;
+
+                                    }
+                                }
                                 break;
                             case 4:
+                                while (istrue3) {
+                                    inputList = (ArrayList<Integer>) ma.inputNumbers();
+
+                                    ma.printChOP();
+                                    int eingabe2 = Integer.parseInt(in.nextLine());
+                                    switch (eingabe2) {
+
+                                        case 1:
+                                            istrue3 = false;
+                                        
+                                            break;
+                                        case 2:
+                                            istrue3 = true;
+                                            break;
+                                        case 3:
+                                            istrue3 = true;
+                                            break;
+                                        case 4:
+                                            istrue3 = true;
+                                            break;
+                                        case 5:
+
+                                            break;
+
+                                    }
+                                }
                                 break;
 
                         }
@@ -238,5 +321,4 @@ public class main {
 
     }
 
-    
 }

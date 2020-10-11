@@ -17,22 +17,22 @@ public class ComplexCalculator extends AbstractCalculator{
 
     
     @Override
-    public Number add(Number a, Number b) {
+    public MyNumber add(MyNumber a, MyNumber b) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Number subtract(Number a, Number b) {
+    public MyNumber subtract(MyNumber a, MyNumber b) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Number multiply(Number a, Number b) {
+    public MyNumber multiply(MyNumber a, MyNumber b) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Number divide(Number a, Number b) {
+    public MyNumber divide(MyNumber a, MyNumber b) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
