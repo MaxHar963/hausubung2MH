@@ -5,6 +5,10 @@
  */
 package hoe2;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 /**
  *
  * @author angeh
@@ -16,7 +20,57 @@ public class main {
      */
     public static void main(String[] args) {
         //HalloJavamitForEach h = new HalloJavamitForEach();
-        NumberTester n = new NumberTester("file");
-    }
-    
-}
+        NumberTester n1 = new NumberTester("file");
+
+        boolean istrue = true;
+
+        Scanner in = new Scanner(System.in);
+
+        while (istrue = true) {
+
+            System.out.println("Bsp NumberTester ... 1");
+            System.out.println("Bsp AbstractCalulator ... 2");
+            System.out.println("Exit  ... 3");
+
+            int eingabe = Integer.parseInt(in.nextLine());
+
+            switch (eingabe) {
+
+                case 1:
+                    NumberTester.NumberTest isEven = (n) -> (n % 2) == 0;
+                    NumberTester.NumberTest isPrime = (n) -> {
+
+                        int sqrt = (int) Math.sqrt(n) + 1;
+                        for (int i = 2; i < sqrt; i++) {
+                            if (n % i == 0) {
+                                return false;
+                            }
+                        }
+                        return true;
+                    };
+                    NumberTester.NumberTest isPalindorme = (n) -> {
+
+                        String x = n+"";
+                        return x.equals(new StringBuilder(x).reverse().toString());
+                        
+                    };
+
+                    n1.setOddEvenTester(isEven);
+                    n1.setPrimeTester(isPrime);
+                    n1.setPalindromeTester(isPalindorme);
+                    
+                    List<String> list = n1.testFile(n1.readFile());
+                    
+                    list.forEach((String s) -> System.out.println(s));
+                    
+                    break;
+
+                case 2:
+                    break;
+                case 3:
+                    break;
+
+            }
+        }
+
+    }}

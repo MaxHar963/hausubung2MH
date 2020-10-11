@@ -15,50 +15,44 @@ import java.util.Scanner;
  *
  * @author angeh
  */
-public class NumberTester implements NumberTest {
+public class NumberTester {
 
-    NumberTester oddTester;
-    NumberTester primeTester;
-    NumberTester palindromTester;
+    NumberTest oddevenTester;
+    NumberTest primeTester;
+    NumberTest palindromTester;
     File objFile;
 
     public NumberTester(String fileName) {
         objFile = new File(fileName + ".txt");
-        try {
-            processData(readFile());
-        } catch (Exception e) {
-            System.out.println("Something is wrong with the File");
-        }
         
-        
-    }
-
-    public void setOddEvenTester(NumberTester oddTester) {
-
-        this.oddTester = oddTester;
 
     }
 
-    public void setPrimeTester(NumberTester primeTester) {
+    public interface NumberTest {
+
+        boolean testNumber(int number);
+
+    }
+
+    public void setOddEvenTester(NumberTest oddTester) {
+
+        this.oddevenTester = oddTester;
+
+    }
+
+    public void setPrimeTester(NumberTest primeTester) {
 
         this.primeTester = primeTester;
 
     }
 
-    public void setPalindromeTester(NumberTester palindromeTester) {
+    public void setPalindromeTester(NumberTest palindromeTester) {
 
         this.palindromTester = palindromeTester;
 
     }
 
-    public void testFile() {
-        //todo
-    }
-
-    @Override
-    public boolean testNumber(int number) {
-        return true;
-    }
+   
 
     public List readFile() {
         List<String> list = new ArrayList<>();
@@ -67,7 +61,9 @@ public class NumberTester implements NumberTest {
 
             Scanner reader = new Scanner(objFile);
             while (reader.hasNextLine()) {
+
                 list.add(reader.nextLine());
+
             }
             reader.close();
         } catch (FileNotFoundException e) {
@@ -78,19 +74,57 @@ public class NumberTester implements NumberTest {
         return list;
 
     }
-    
-    public List processData(List list1)
-    {
-    
-          for(int i = 0;i<Integer.parseInt((String) list1.get(0));i++)
-          {
-          
-               System.err.println(list1.get(i));
-          
-          
-          }
-    
-          return new ArrayList();
+
+    public List<String> testFile(List<String> list1) {
+
+        List<String> strList = new ArrayList<>();
+
+        for (int i = 1; i < Integer.parseInt(list1.get(0)); i++) {
+
+            String x = list1.get(i);
+            String[] arr = x.split(" ");
+
+            switch (arr[0]) {
+
+                case "1":
+                    if (oddevenTester.testNumber(Integer.parseInt(arr[1]))) {
+
+                        strList.add("EVEN");
+
+                    } else {
+
+                        strList.add("ODD");
+
+                    }
+                    break;
+                case "2":
+                    if (primeTester.testNumber(Integer.parseInt(arr[1]))) {
+
+                        strList.add("PRIME");
+
+                    } else {
+
+                        strList.add("NO PRIME");
+
+                    }
+                    break;
+                case "3":
+                    if (palindromTester.testNumber(Integer.parseInt(arr[1]))) {
+
+                        strList.add("PALINDROME");
+
+                    } else {
+
+                        strList.add("NO PALINDROME");
+
+                    }
+                    break;
+
+            }
+
+        }
+
+        return strList;
     }
 
 }
