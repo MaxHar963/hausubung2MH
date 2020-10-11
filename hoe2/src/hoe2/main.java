@@ -99,6 +99,30 @@ public class main {
                     
                     });
                     
+                    AbstractCalculator vectorCalculator = new VectorCalculator(
+                    (a, b) -> {
+                    
+                    return new Number(a.getA()+b.getB(),b.getA()+b.getB());
+                    
+                    },
+                    (a, b) -> {
+                    
+                    
+                    return new Number(a.getA()+-b.getB(),b.getA()-b.getB());
+                    
+                    
+                    },
+                    (a, b) -> {
+                    
+                    return new Number(a.getA()*b.getA()+a.getB()*b.getB(),0);
+                    
+                    },
+                    (a, b) -> {
+                    
+                    return new Number(a.getA()/b.getA(),0);
+                    
+                    
+                    });
                     
                     
                      
