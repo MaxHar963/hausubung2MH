@@ -22,6 +22,8 @@ public class main {
         //HalloJavamitForEach h = new HalloJavamitForEach();
         NumberTester n1 = new NumberTester("file");
 
+        main ma = new main();
+
         boolean istrue = true;
         boolean istrue1 = true;
 
@@ -143,33 +145,52 @@ public class main {
                             });
 
                     while (istrue1) {
-                        
-                         System.out.println("Choose calculator: ");
-                         System.out.println("1 - Retional Calculator");
-                         System.out.println("2 - Vector Calculator");
-                         System.out.println("3 - Complex Calculator");
-                         System.out.println("4 - Exit program");
-                         
-                         int eingabe1 = Integer.parseInt(in.nextLine());
-                         switch(eingabe1)
-                         {
-                         
-                             case 1:
-                                 
-                                 
-                                 break;
-                             case 2:
-                                 
-                                 
-                                 break;
-                             case 3:
-                                 break;
-                             case 4:
-                                 break;
-                         
-                         
-                         
-                         }
+
+                        System.out.println("Choose calculator: ");
+                        System.out.println("1 - Retional Calculator");
+                        System.out.println("2 - Vector Calculator");
+                        System.out.println("3 - Complex Calculator");
+                        System.out.println("4 - Exit program");
+
+                        int eingabe1 = Integer.parseInt(in.nextLine());
+                        boolean istrue3 = true;
+                        ArrayList<Integer> inputList;
+                        switch (eingabe1) {
+
+                            case 1:
+
+                                while (istrue3) {
+                                    inputList = (ArrayList<Integer>) ma.inputNumbers();
+                                }
+
+                                ma.printChOP();
+                                int eingabe2 = Integer.parseInt(in.nextLine());
+                                switch (eingabe2) {
+
+                                    case 1:
+                                        
+                                        break;
+                                    case 2:
+                                        break;
+                                    case 3:
+                                        break;
+                                    case 4:
+                                        break;
+                                    case 5:
+                                        break;
+
+                                }
+
+                                break;
+                            case 2:
+
+                                break;
+                            case 3:
+                                break;
+                            case 4:
+                                break;
+
+                        }
                     }
 
                     break;
@@ -181,81 +202,41 @@ public class main {
         }
 
     }
-    
-    public void printChOP()
-    {
-    
+
+    public void printChOP() {
+
         System.out.println("Choose operation: ");
         System.out.println("1 - add");
         System.out.println("2 - subtract");
         System.out.println("3 - multiply");
         System.out.println("4 - divide");
         System.out.println("5 - enter numbers again");
-        
-        
+
     }
-    
-    public List<Integer> inputNumbers()
-    {
+
+    public List<Integer> inputNumbers() {
         Scanner in = new Scanner(System.in);
-    
+
         List<Integer> list = new ArrayList<>();
-        
-                
-          
-            do {                    
-                    
-                
-               System.out.println("Enter number x a> ");
-               
-               if(checkInput(Integer.parseInt(in.nextLine())))
-               {
-                   list.add(Integer.parseInt(in.nextLine()));
-               }
-               else
-               {
-               continue;
-               }
-               
-               System.out.println("Enter number x b> ");
-               if(checkInput(Integer.parseInt(in.nextLine())))
-               {
-                   list.add(Integer.parseInt(in.nextLine()));
-               }
-               else
-               {
-               continue;
-               }
-               
-               System.out.println("Enter number y a> "); 
-               if(checkInput(Integer.parseInt(in.nextLine())))
-               {
-                   list.add(Integer.parseInt(in.nextLine()));
-               }
-               else
-               {
-               continue;
-               }
-             
-               System.out.println("Enter number y b> "); 
-               if(checkInput(Integer.parseInt(in.nextLine())))
-               {
-                   list.add(Integer.parseInt(in.nextLine()));
-               }
-               else
-               {
-               continue;
-               }
-               
-               return list;
-               
-               
-                } while (true);
-            
-                
-               
-     }
+
+        System.out.println("Enter number x a> ");
+
+        list.add(Integer.parseInt(in.nextLine()));
+
+        System.out.println("Enter number x b> ");
+        list.add(Integer.parseInt(in.nextLine()));
+
+        System.out.println("Enter number y a> ");
+
+        list.add(Integer.parseInt(in.nextLine()));
+
+        System.out.println("Enter number y b> ");
+
+        list.add(Integer.parseInt(in.nextLine()));
+
+        return list;
+
+    }
+
     
-    
-     public boolean checkInput(int input){return input > 4 ? true : false;}
 }
